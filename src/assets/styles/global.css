@@ -1,0 +1,62 @@
+@font-face {
+  font-family: 'Marigold';
+  src: url('../fonts/Marigold.eot');
+  src: url('../fonts/Marigold.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Marigold.woff2') format('woff2'),
+    url('../fonts/Marigold.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Libre Baskerville';
+  src: url('../fonts/LibreBaskerville-Regular.eot');
+  src: url('../fonts/LibreBaskerville-Regular.eot?#iefix')
+      format('embedded-opentype'),
+    url('../fonts/LibreBaskerville-Regular.woff2') format('woff2'),
+    url('../fonts/LibreBaskerville-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Quicksand';
+  src: url('../fonts/QuicksandLight-Regular.eot');
+  src: url('../fonts/QuicksandLight-Regular.eot?#iefix')
+      format('embedded-opentype'),
+    url('../fonts/QuicksandLight-Regular.woff2') format('woff2'),
+    url('../fonts/QuicksandLight-Regular.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+}
+html {
+  box-sizing: border-box;
+}
+body {
+  background: #fffefc;
+  color: #111;
+  margin: 0;
+}
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+a {
+  color: #111;
+  text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Libre Baskerville';
+  font-weight: 100;
+  margin: 0;
+}
+p {
+  font-family: 'Quicksand';
+  font-weight: bold;
+}
