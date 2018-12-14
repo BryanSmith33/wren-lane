@@ -33,7 +33,6 @@ const NavLink = styled(Link)`
   }
 `
 const CompanyName = styled.h1`
-  width: 257px;
   @media (max-width: 800px) {
     width: initial;
     text-align: center;

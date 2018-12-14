@@ -25,8 +25,8 @@ const MobileLink = styled(Link)`
   display: flex;
 `
 const MobileNavLinks = styled.div`
-  height: 45px;
-  width: 60px;
+  height: 40px;
+  width: 50px;
   border: 1px solid #d9d9d9;
   border-radius: 3px;
   box-shadow: 1px 3px 5px 0px #d3d3d3;

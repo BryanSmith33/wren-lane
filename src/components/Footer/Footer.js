@@ -1,40 +1,26 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Link } from 'gatsby'
-import { Logo, Wren, Lane } from '../uiComponents/uiComponents'
-import logo from '../../assets/images/wren_lane_logo.png'
+import NavLink from './NavLinks'
+import Insta from './Insta'
+import SubScribe from './Subscribe'
 
 const FooterContainer = styled.footer`
-  border-top: 1px solid #eee;
   display: flex;
-  align-items: center;
   justify-content: space-evenly;
-  padding: 1em;
-`
-const FooterLinks = styled.div`
-  display: flex;
-  flex-direction: column;
-`
-const NavLink = styled(Link)`
-  font-size: 1.1em;
-  font-family: 'Quicksand';
-  font-weight: bold;
-  &:nth-child(odd) {
-    margin: 1em 0;
+  align-items: center;
+  flex-wrap: wrap;
+  border-top: 1px solid #eee;
+  padding: 1em 3em 0;
+  @media (max-width: 1450px){
+    /* flex-direction: column-reverse; */
   }
 `
 
 const Footer = () => (
   <FooterContainer>
-    <div>
-      <Logo src={logo} />
-      <FooterLinks>
-        <NavLink to={`/`}>Home</NavLink>
-        <NavLink to={`/about`}>About Us</NavLink>
-        <NavLink to={`/contact`}>Contact</NavLink>
-        <NavLink to={`/search`}>Search</NavLink>
-      </FooterLinks>
-    </div>
+    <NavLink />
+    <SubScribe />
+    <Insta />
   </FooterContainer>
 )
 
