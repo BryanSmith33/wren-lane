@@ -5,7 +5,6 @@ import DesktopNav from './DesktopNav'
 const NavBar = ({ hide }) => {
   return <Fragment>
       <DesktopNav hide={hide} />
-      <MobileNav hide={hide} />
     </Fragment>
 }
 

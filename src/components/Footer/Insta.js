@@ -5,11 +5,20 @@ import styled from 'styled-components'
 
 const InstaContainer = styled.div`
   display: flex;
-  flex-wrap: wrap;
+  justify-content: center;
   position: relative;
   margin-top: 3em;
+  overflow: auto;
   &:hover > div {
     opacity: 1;
+  }
+  @media (max-width: 1000px) {
+    max-width: 600px;
+    flex-wrap: wrap;
+    margin: 2em auto 0;
+  }
+  @media (max-width: 599px) {
+    max-width: 300px;
   }
 `
 const InstaOverlay = styled.div`
@@ -23,6 +32,10 @@ const InstaOverlay = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  @media (max-width: 800px) {
+    opacity: 1;
+    z-index: 1;
+  }
 `
 const InstaFollowBtn = styled.button`
   background: transparent;
@@ -30,7 +43,7 @@ const InstaFollowBtn = styled.button`
   color: #fff;
   text-transform: uppercase;
   padding: 1em;
-  font-family: 'Quicksand';
+  font-family: 'Quickie', Arial, Helvetica, sans-serif;
   font-weight: bold;
   font-size: 1em;
 `

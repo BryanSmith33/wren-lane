@@ -11,13 +11,16 @@ const SubScribeContainer = styled.div`
   border: 1px solid #8b8b8b;
   background: #fffefc;
   box-shadow: 1px 4px 10px #a2a2a2;
+  @media (max-width: 800px) {
+    margin: 1.5em 0;
+  }
 `
 const Subscribe = styled.form`
   display: flex;
   flex-direction: column;
 `
 const Input = styled.input`
-  font-family: 'Libre Baskerville';
+  font-family: 'Libreville', 'Times New Roman', Times, serif;
   height: 30px;
   padding: 2em 1em;
   margin: 1em 0;
@@ -28,7 +31,7 @@ const Input = styled.input`
 const Button = styled.button`
   border: none;
   text-transform: uppercase;
-  font-family: 'Quicksand';
+  font-family: 'Quickie', Arial, Helvetica, sans-serif;
   font-size: 1em;
   font-weight: bold;
   padding: 0.8em;

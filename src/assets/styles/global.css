@@ -1,31 +1,31 @@
 @font-face {
-  font-family: 'Marigold';
-  src: url('../fonts/Marigold.eot');
-  src: url('../fonts/Marigold.eot?#iefix') format('embedded-opentype'),
-    url('../fonts/Marigold.woff2') format('woff2'),
-    url('../fonts/Marigold.woff') format('woff');
+  font-family: 'Bodigold';
+  src: url('../fonts/Bodigold.eot');
+  src: url('../fonts/Bodigold.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Bodigold.woff2') format('woff2'),
+    url('../fonts/Bodigold.woff') format('woff');
   font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Libre Baskerville';
-  src: url('../fonts/LibreBaskerville-Regular.eot');
-  src: url('../fonts/LibreBaskerville-Regular.eot?#iefix')
+  font-family: 'Libreville';
+  src: url('../fonts/Libreville-Regular.eot');
+  src: url('../fonts/Libreville-Regular.eot?#iefix')
       format('embedded-opentype'),
-    url('../fonts/LibreBaskerville-Regular.woff2') format('woff2'),
-    url('../fonts/LibreBaskerville-Regular.woff') format('woff');
+    url('../fonts/Libreville-Regular.woff2') format('woff2'),
+    url('../fonts/Libreville-Regular.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Quicksand';
-  src: url('../fonts/QuicksandLight-Regular.eot');
-  src: url('../fonts/QuicksandLight-Regular.eot?#iefix')
+  font-family: 'Quickie';
+  src: url('../fonts/Quickie-Regular.eot');
+  src: url('../fonts/Quickie-Regular.eot?#iefix')
       format('embedded-opentype'),
-    url('../fonts/QuicksandLight-Regular.woff2') format('woff2'),
-    url('../fonts/QuicksandLight-Regular.woff') format('woff');
+    url('../fonts/Quickie-Regular.woff2') format('woff2'),
+    url('../fonts/Quickie-Regular.woff') format('woff');
   font-weight: 300;
   font-style: normal;
 }
@@ -52,11 +52,11 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Libre Baskerville';
+  font-family: 'Libreville';
   font-weight: 100;
   margin: 0;
 }
 p {
-  font-family: 'Quicksand';
+  font-family: 'Quickie', Arial, Helvetica, sans-serif;
   font-weight: bold;
 }

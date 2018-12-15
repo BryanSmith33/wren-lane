@@ -17,7 +17,7 @@ const FooterLinks = styled.div`
 `
 const NavLink = styled(Link)`
   font-size: 1.1em;
-  font-family: 'Quicksand';
+  font-family: 'Quickie', Arial, Helvetica, sans-serif;
   font-weight: bold;
   &:nth-child(odd) {
     margin: 1em 0;

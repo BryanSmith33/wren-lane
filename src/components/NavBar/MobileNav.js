@@ -19,6 +19,7 @@ const MobileNavContainer = styled.header`
     display: flex;
     justify-content: space-between;
     align-items: center;
+    z-index: 3;
   }
 `
 const MobileLink = styled(Link)`
@@ -52,7 +53,7 @@ const CompanyName = styled.h1`
 class MobileNav extends Component {
   render() {
     return (
-      <MobileNavContainer style={{ top: this.props.hide ? -100 : 0 }}>
+      <MobileNavContainer style={{ top: this.props.hide ? -120 : 0 }}>
         <MobileLink to={`/`}>
           <CompanyName>
             <Wren>Wren</Wren><br />

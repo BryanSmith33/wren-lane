@@ -8,12 +8,12 @@ const FeaturedImg = styled(Img)`
   margin-right: 2em;
 `
 const PostTitle = styled.h1`
-  font-family: 'Libre Baskerville';
+  font-family: 'Libreville', 'Times New Roman', Times, serif;
   font-weight: 100;
   margin-bottom: 0;
 `
 const PostDate = styled.h3`
-  font-family: 'Quicksand';
+  font-family: 'Quickie', Arial, Helvetica, sans-serif;
   font-weight: bold;
   margin-top: 0;
 `

@@ -17,11 +17,11 @@ const Brand = styled.h1`
   top: 55px;
 `
 const Wren = styled.span`
-  font-family: 'Libre Baskerville';
+  font-family: 'Libreville', 'Times New Roman', Times, serif;
   font-weight: 100;
 `
 const Lane = styled.span`
-  font-family: 'Marigold';
+  font-family: 'Bodigold', Zapf Chancery, cursive;
   font-weight: 100;
 `
 

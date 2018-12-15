@@ -19,12 +19,12 @@ const PostLink = styled(Link)`
   }
 `
 const PostTitle = styled.h2`
-  font-family: 'Libre Baskerville';
+  font-family: 'Libreville', 'Times New Roman', Times, serif;
   font-weight: 100;
   margin-bottom: 0;
 `
 const PostDate = styled.h3`
-  font-family: 'Quicksand';
+  font-family: 'Quickie', Arial, Helvetica, sans-serif;
   font-weight: bold;
   margin: 0;
   transform: rotate(-90deg);

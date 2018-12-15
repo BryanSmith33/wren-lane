@@ -13,7 +13,7 @@ const PostDate = styled.p`
   margin: 0;
 `
 const PostText = styled.div`
-  font-family: 'Quicksand';
+  font-family: 'Quickie', Arial, Helvetica, sans-serif;
   font-weight: bold;
   line-height: 1.6em;
 `
@@ -33,7 +33,7 @@ const navAnimation = keyframes`
   }
 `
 const InPostNav = styled.li`
-  font-family: 'Quicksand';
+  font-family: 'Quickie', Arial, Helvetica, sans-serif;
   list-style: none;
   transition: all 0.7s;
   font-weight: bold;
