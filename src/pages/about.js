@@ -8,6 +8,10 @@ const AboutHeroImg = styled.img`
   height: 500px;
   float: left;
   margin: 0 1em 1em 0;
+  @media (max-width: 800px){
+    width: 100%;
+    height: 100%;
+  }
 `
 const IntroText = styled.p`
   margin-top: 0;

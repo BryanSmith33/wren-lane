@@ -8,7 +8,7 @@ import Footer from './Footer/Footer'
 
 const Container = styled.div`
   max-width: 1125px;
-  padding: 8em 1em 2em;
+  padding: 6em 1em 2em;
   margin: 0 auto;
 `
 const Brand = styled.h1`

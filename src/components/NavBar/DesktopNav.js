@@ -39,7 +39,9 @@ const NavLink = styled(Link)`
     margin: 0 1em;
   }
   @media (max-width: 800px) {
-    margin: initial;
+    &:nth-child(odd) {
+      margin: initial;
+    }
   }
 `
 const CompanyName = styled.h1`
