@@ -10,6 +10,7 @@ const FooterContainer = styled.footer`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+  clear: both;
   @media (max-width: 800px) {
     align-items: center;
     flex-direction: column-reverse;

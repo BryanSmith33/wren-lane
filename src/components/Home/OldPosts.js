@@ -40,9 +40,6 @@ const Image = styled(Img)`
     width: 100%;
   }
 `
-const PostExcerpt = styled.p`
-  line-height: 1.3em;
-`
 
 const Posts = ({ postInfo }) => {
   return (
@@ -59,7 +56,7 @@ const Posts = ({ postInfo }) => {
                     sizes={node.frontmatter.heroImage.childImageSharp.sizes}
                     alt={node.frontmatter.title}
                   />
-                  <PostExcerpt>{node.excerpt}</PostExcerpt>
+                  <p>{node.excerpt}</p>
                 </Fragment>
               </PostLink>
               <SubscribeForm />
@@ -73,7 +70,7 @@ const Posts = ({ postInfo }) => {
                   sizes={node.frontmatter.heroImage.childImageSharp.sizes}
                   alt={node.frontmatter.title}
                 />
-                <PostExcerpt>{node.excerpt}</PostExcerpt>
+                <p>{node.excerpt}</p>
               </Fragment>
             </PostLink>
           )

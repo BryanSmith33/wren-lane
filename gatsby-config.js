@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: 'Wren Lane',
     author: 'Bryan and Lindsey Smith',
-    description: 'Home Renovation',
+    description: 'Home renovation, health, fashion and family blog',
     siteUrl: 'https://wrenlane.com',
   },
   pathPrefix: '/wren-lane',
