@@ -2,7 +2,7 @@ import React, { Fragment } from 'react'
 import Layout from '../components/layout'
 import Helmet from 'react-helmet'
 import styled from 'styled-components'
-import family from '../assets/images/family.jpg'
+import family from '../../content/assets/images/family.jpg'
 
 const AboutHeroImg = styled.img`
   height: 500px;
@@ -75,20 +75,20 @@ const About = () => (
         guest bathroom to creating mac n cheese that is both delicious and
         healthy.
       </AboutText>
-      <PersonTitle>LitteLoveOne (LLO)</PersonTitle>
+      <PersonTitle>Charlotte</PersonTitle>
       <AboutText>
-        LittleLoveOne is our oldest daughter. She is the perfect mix between the
+        Charlotte is our oldest daughter. She is the perfect mix between the
         two of us. She is as goofy as can be and her belly laugh can be heard
         throughout the entire house. She is also extremely caring, sometimes so
-        much so that LittleLoveTwo thinks it borders on smothering. You can
+        much so that June thinks it borders on smothering. You can
         often find her wrestling the dogs and asking how she can help her
         parents, even if it means getting her hands a little dirty.
       </AboutText>
-      <PersonTitle>LitteLoveTwo (LLT)</PersonTitle>
+      <PersonTitle>June</PersonTitle>
       <AboutText>
-        LittleLoveTwo is as fierce as can be. She packs an enourmous amount of
+        June is as fierce as can be. She packs an enourmous amount of
         personality in such a small body. She has an imagination that is
-        unmatched by anyone else in the family. If there is one thing LLT loves
+        unmatched by anyone else in the family. If there is one thing June loves
         more than anything, it is dance parties.
       </AboutText>
       <PersonTitle>Sperry</PersonTitle>

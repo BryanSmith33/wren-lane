@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { Link } from 'gatsby'
 import { Logo } from '../uiComponents/uiComponents'
-import logo from '../../assets/images/wren_lane_logo.png'
+import logo from '../../../content/assets/images/wren_lane_logo.png'
 
 const FooterNavLinkContainer = styled.div`
   width: 300px;

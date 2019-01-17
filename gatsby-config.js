@@ -11,8 +11,15 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: 'src',
-        path: `${__dirname}/src/pages`,
+        name: 'posts',
+        path: `${__dirname}/content/posts`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/content/assets`,
+        name: `assets`,
       },
     },
     {
@@ -55,7 +62,7 @@ module.exports = {
         background_color: `#fffefc`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/assets/images/wren_lane_logo.png`,
+        icon: `content/assets/images/wren_lane_logo.png`,
       },
     },
     `gatsby-plugin-offline`,

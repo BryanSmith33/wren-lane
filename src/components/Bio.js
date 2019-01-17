@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
-import Beeg from '../assets/images/beeg.png'
-import Lindsey from '../assets/images/lindsey.png'
+import Beeg from '../../content/assets/images/beeg.png'
+import Lindsey from '../../content/assets/images/lindsey.png'
 
 const BioContainer = styled.div`
   display: flex;
