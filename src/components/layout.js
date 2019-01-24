@@ -30,6 +30,7 @@ const Lane = styled.span`
 const WrenLaneContainer = styled.h1`
   text-align: center;
   font-size: 3.25em;
+  margin-bottom: .3em;
 `
 
 class Template extends Component {
@@ -41,6 +42,7 @@ class Template extends Component {
   }
 
   handleMenuClick = () => {
+    console.log('clicked');
     this.setState(prevState => {
       return {
         menuVisible: !prevState.menuVisible,
@@ -56,7 +58,7 @@ class Template extends Component {
         <Menu />
         <div>
           <NavBar method={this.handleMenuClick} />
-          <Container>
+          <Container onClick={this.state.menuVisible ? this.handleMenuClick : undefined}>
             <WrenLaneContainer>
               <Wren>Wren</Wren>
               <Lane>Lane</Lane>
