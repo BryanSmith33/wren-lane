@@ -70,7 +70,7 @@ module.exports = {
     {
       resolve: `gatsby-source-instagram`,
       options: {
-        username: `refineshape`,
+        username: `wren.lane`,
       },
     },
   ],
