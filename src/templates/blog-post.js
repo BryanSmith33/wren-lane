@@ -55,33 +55,42 @@ class BlogPostTemplate extends Component {
     const siteDescription = post.excerpt
     const { previous, next } = this.props.pageContext
     const author = post.frontmatter.author
-    return <Layout location={this.props.location}>
-        <Helmet htmlAttributes={{ lang: 'en' }} meta={[{ name: 'description', content: siteDescription }]} title={`${siteTitle} | ${post.frontmatter.title}`} />
+    return (
+      <Layout location={this.props.location}>
+        <Helmet
+          htmlAttributes={{ lang: 'en' }}
+          meta={[{ name: 'description', content: siteDescription }]}
+          title={`${siteTitle} | ${post.frontmatter.title}`}
+        />
         <PostTitle>{post.frontmatter.title}</PostTitle>
         <PostDate>{post.frontmatter.date}</PostDate>
         <PostText dangerouslySetInnerHTML={{ __html: post.html }} />
         <hr />
-
         <InPostNavContainer>
           <InPostNav>
-            {next && <Link to={next.fields.slug} rel="next">
+            {next && (
+              <Link to={next.fields.slug} rel="next">
                 <span>←</span> {next.frontmatter.title}
-              </Link>}
+              </Link>
+            )}
           </InPostNav>
           <InPostNav>
-            {previous && <Link to={previous.fields.slug} rel="prev">
+            {previous && (
+              <Link to={previous.fields.slug} rel="prev">
                 {previous.frontmatter.title} <span>→</span>
-              </Link>}
+              </Link>
+            )}
           </InPostNav>
         </InPostNavContainer>
         <Bio author={author} />
       </Layout>
+    )
   }
 }
 
 export default BlogPostTemplate
 
-export const pageQuery = graphql`
+export const blogQuery = graphql`
   query BlogPostBySlug($slug: String!) {
     site {
       siteMetadata {

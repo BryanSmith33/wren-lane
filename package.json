@@ -28,8 +28,8 @@
     "gatsby-transformer-sharp": "^2.1.3",
     "lodash": "^4.17.11",
     "prismjs": "^1.15.0",
-    "react": "^16.5.1",
-    "react-dom": "^16.5.1",
+    "react": "^16.8.5",
+    "react-dom": "^16.8.5",
     "react-helmet": "^5.2.0",
     "styled-components": "^4.1.2",
     "typeface-merriweather": "0.0.43",
@@ -41,9 +41,11 @@
     "gh-pages": "^1.2.0",
     "prettier": "^1.14.2"
   },
-  "homepage": "wrenlane.com",
+  "homepage": "www.wrenlane.com",
   "keywords": [
-    "wren lane", "home", "renovation"
+    "wren lane",
+    "home",
+    "renovation"
   ],
   "license": "MIT",
   "main": "n/a",

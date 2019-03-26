@@ -10,7 +10,7 @@ const SubScribeContainer = styled.div`
   text-align: center;
   border: 1px solid #8b8b8b;
   background: #fffefc;
-  box-shadow: 1px 4px 10px #a2a2a2;
+  box-shadow: 0px 0px 8px #a2a2a2;
   @media (max-width: 800px) {
     margin: 1.5em 0;
   }
@@ -22,7 +22,7 @@ const Subscribe = styled.form`
 const Input = styled.input`
   font-family: 'Libreville', 'Times New Roman', Times, serif;
   height: 30px;
-  padding: 2em 1em;
+  padding: 0em .5em;
   margin: 1em 0;
   border: none;
   border-bottom: 1px solid #8b8b8b;

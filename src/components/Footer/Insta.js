@@ -37,7 +37,7 @@ const InstaOverlay = styled.div`
     z-index: 1;
   }
 `
-const InstaFollowBtn = styled.button`
+const InstaFollowBtn = styled.a`
   background: transparent;
   border: 2px solid #bba432;
   color: #fff;
@@ -46,6 +46,7 @@ const InstaFollowBtn = styled.button`
   font-family: 'Quickie', Arial, Helvetica, sans-serif;
   font-weight: bold;
   font-size: 1em;
+  cursor: pointer;
 `
 
 class Insta extends Component {
@@ -53,7 +54,7 @@ class Insta extends Component {
     return (
       <InstaContainer>
         <InstaOverlay>
-          <InstaFollowBtn>follow us on the gram</InstaFollowBtn>
+          <InstaFollowBtn target="_blank" href="https://www.instagram.com/wren.lane/">follow us on the gram</InstaFollowBtn>
         </InstaOverlay>
         <StaticQuery
           query={graphql`

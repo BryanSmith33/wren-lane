@@ -1,15 +1,19 @@
-import React from 'react'
+import React, {Component} from 'react'
 import styled from 'styled-components'
 import img from '../../../content/assets/images/IMG_8227.jpg'
 import { Link } from 'gatsby'
 
 const MenuContaier = styled.div`
   width: 300px;
-  height: 100%;
+  height: calc(100vh - 50px);
+  background: #fffefc;
+  z-index: 3;
   position: fixed;
-  left: -300px;
+  left: ${props => (props.visible ? `0` : `-1000px`)};
+  bottom: 0px;
   border-right: 1px solid #bdbdbd;
   box-shadow: 3px -1px 4px #eee;
+  transition: left .7s cubic-bezier(0.25, 0.46, 0.07, 0.85);
 `
 const MenuImgContainer = styled.div``
 const MenuImg = styled.img`
@@ -32,9 +36,9 @@ const NavLink = styled(Link)`
   }
 `
 
-const Menu = () => {
+const Menu = ({visible, bottom}) => {
   return (
-    <MenuContaier>
+    <MenuContaier visible={visible} bottom={bottom}>
       <MenuImgContainer>
         <MenuImg src={img} alt="" />
       </MenuImgContainer>

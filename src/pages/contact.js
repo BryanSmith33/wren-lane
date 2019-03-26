@@ -11,6 +11,9 @@ const ContactContainer = styled.div`
   justify-content: space-evenly;
   align-items: center;
   margin: 2em 0;
+  @media (max-width: 800px) {
+    flex-direction: column;
+  }
 `
 const ContactText = styled.p`
   width: 300px;
@@ -26,7 +29,7 @@ const ContactForm = styled.form`
 const FormInput = styled.input`
   font-family: 'Libreville', 'Times New Roman', Times, serif;
   height: 30px;
-  padding: 2em 1em;
+  padding:  0em .5em;
   margin: 1em 0;
   border: none;
   border-bottom: 1px solid #8b8b8b;
@@ -35,6 +38,8 @@ const FormInput = styled.input`
 const FormTextArea = styled.textarea`
   resize: none;
   height: 200px;
+  font-family: 'Libreville', 'Times New Roman', Times, serif;
+
 `
 const FormBtn = styled.button`
   border: none;
@@ -65,7 +70,7 @@ const Contact = () => (
       title={`Wren Lane | Contact Us`}
     />
     <Fragment>
-      <ContactTitle>Contact Wren Lane</ContactTitle>
+      <ContactTitle>Contact Us</ContactTitle>
       <ContactContainer>
         <ContactText>
           Want to know more? Looking for a recipe? Interested in working with
@@ -75,10 +80,10 @@ const Contact = () => (
             hello@wrenlane.com
           </ContactEmail>
         </ContactText>
-        <ContactForm>
-          <FormInput type="text" placeholder="Name" />
-          <FormInput type="text" placeholder="Email" />
-          <FormTextArea name="" id="" />
+        <ContactForm name="contact" data-netlify="true">
+          <FormInput type="text" placeholder="Name" name="name"/>
+          <FormInput type="text" placeholder="Email" email="email"/>
+          <FormTextArea placeholder="Enter your message here..." name="message" />
           <FormBtn type="button">send</FormBtn>
         </ContactForm>
       </ContactContainer>

@@ -14,6 +14,7 @@ const DesktopNavContainer = styled.header`
   box-shadow: 0px 4px 20px #d0d0d0;
   position: fixed;
   left: 0;
+  top: 0;
   z-index: 2;
 `
 const NavMenuToggle = styled.div`
@@ -22,6 +23,7 @@ const NavMenuToggle = styled.div`
   text-transform: uppercase;
   font-family: 'Quickie';
   font-weight: bold;
+  cursor: pointer;
 `
 const NavbarLogo = styled(Logo)`
   height: 35px;

@@ -10,14 +10,12 @@ import Menu from './NavBar/Menu'
 import Footer from './Footer/Footer'
 
 const SiteWrapper = styled.div`
-  transform: ${props => (props.visible ? `translateX(300px)` : `initial`)};
-  position: ${props => (props.visible ? `fixed` : `initial`)};
-  transition: all 0.3s linear;
 `
 const Container = styled.div`
   max-width: 1125px;
   padding: 4.5em 1em 2em;
   margin: 0 auto;
+  min-height: calc(100vh - 372px);
 `
 const Wren = styled.span`
   font-family: 'Libreville', 'Times New Roman', Times, serif;
@@ -37,28 +35,27 @@ class Template extends Component {
   constructor() {
     super()
     this.state = {
-      menuVisible: false,
+      menuVisible: false
     }
   }
 
   handleMenuClick = () => {
-    console.log('clicked');
     this.setState(prevState => {
       return {
         menuVisible: !prevState.menuVisible,
       }
     })
-  }
+  }  
 
   render() {
     const { children } = this.props
 
     return (
-      <SiteWrapper visible={this.state.menuVisible}>
-        <Menu />
-        <div>
+      <SiteWrapper onScroll={this.handleBottomScroll}>
+        <Menu visible={this.state.menuVisible} />
+        <Fragment>
           <NavBar method={this.handleMenuClick} />
-          <Container onClick={this.state.menuVisible ? this.handleMenuClick : undefined}>
+          <Container onClick={this.state.menuVisible ? this.handleMenuClick : undefined }>
             <WrenLaneContainer>
               <Wren>Wren</Wren>
               <Lane>Lane</Lane>
@@ -66,7 +63,7 @@ class Template extends Component {
             {children}
           </Container>
           <Footer />
-        </div>
+        </Fragment>
       </SiteWrapper>
     )
   }

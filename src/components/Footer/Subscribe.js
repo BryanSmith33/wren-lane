@@ -11,7 +11,7 @@ const FooterSubScribeContainer = styled.div`
     border: 1px solid #8b8b8b;
     padding: 3em 1em;
     width: inherit;
-    box-shadow: 1px 4px 10px #a2a2a2;
+    box-shadow: 0px 3px 7px #a2a2a2;
   }
   @media (max-width: 600px) {
     margin: 3em 1em;
