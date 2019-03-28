@@ -38,9 +38,7 @@ const Search = ({ data }) => {
           .includes(searchInput.current.value)
       }
     })
-
     updateFilteredPosts(filtered)
-    console.log(filteredPosts)
   }
 
   const results = filteredPosts.map((post, index) => (
