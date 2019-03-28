@@ -8,8 +8,10 @@ import Layout from '../components/layout'
 
 class BlogIndex extends Component {
   render() {
-    const siteTitle = this.props.data.site.siteMetadata.title
-    const siteDescription = this.props.data.site.siteMetadata.description
+    const {
+      title: siteTitle,
+      description: siteDescription,
+    } = this.props.data.site.siteMetadata
     const featuredPost = this.props.data.featured.edges[0]
     const oldPosts = this.props.data.old.edges
     return (

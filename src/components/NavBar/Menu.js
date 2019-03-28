@@ -7,10 +7,10 @@ const MenuContaier = styled.div`
   width: 300px;
   height: calc(100vh - 50px);
   background: #fffefc;
-  z-index: 3;
+  z-index: 2;
   position: fixed;
   left: ${props => (props.visible ? `0` : `-1000px`)};
-  bottom: 0px;
+  top: 50px;
   border-right: 1px solid #bdbdbd;
   box-shadow: 3px -1px 4px #eee;
   transition: left .7s cubic-bezier(0.25, 0.46, 0.07, 0.85);

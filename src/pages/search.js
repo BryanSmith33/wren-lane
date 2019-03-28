@@ -12,6 +12,7 @@ const SearchInput = styled.input`
   width: 300px;
   padding: 0 0.5em;
   font-family: 'Libreville', 'Times New Roman', Times, serif;
+  font-size: 16px;
   display: block;
   margin: 1em auto;
 `
@@ -25,7 +26,7 @@ const PostDate = styled.p`
 `
 
 const Search = ({ data }) => {
-  const posts = data.allMarkdownRemark.edges
+  const { edges: posts } = data.allMarkdownRemark
   const searchInput = useRef(null)
   const [filteredPosts, updateFilteredPosts] = useState([])
 
