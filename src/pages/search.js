@@ -31,11 +31,11 @@ const Search = ({ data }) => {
   const [filteredPosts, updateFilteredPosts] = useState([])
 
   const handleSearch = () => {
-    const filtered = posts.filter(post => {
+    const filtered = posts.filter((post) => {
       if (searchInput.current.value) {
         return post.node.frontmatter.title
           .toLowerCase()
-          .includes(searchInput.current.value)
+          .includes(searchInput.current.value.toLowerCase())
       }
     })
     updateFilteredPosts(filtered)
