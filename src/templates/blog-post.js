@@ -20,6 +20,7 @@ const PostText = styled.div`
 const InPostNavContainer = styled.ul`
   display: flex;
   justify-content: space-between;
+  margin: 0;
 `
 const navAnimation = keyframes`
   0% {

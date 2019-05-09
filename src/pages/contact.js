@@ -29,7 +29,7 @@ const ContactForm = styled.form`
 const FormInput = styled.input`
   font-family: 'Libreville', 'Times New Roman', Times, serif;
   height: 30px;
-  padding:  0em .5em;
+  padding: 0em 0.5em;
   margin: 1em 0;
   border: none;
   border-bottom: 1px solid #8b8b8b;
@@ -38,8 +38,8 @@ const FormInput = styled.input`
 const FormTextArea = styled.textarea`
   resize: none;
   height: 200px;
+  margin: 1em 0;
   font-family: 'Libreville', 'Times New Roman', Times, serif;
-
 `
 const FormBtn = styled.button`
   border: none;
@@ -80,11 +80,20 @@ const Contact = () => (
             hello@wrenlane.com
           </ContactEmail>
         </ContactText>
-        <ContactForm name="contact" data-netlify="true">
-          <FormInput type="text" placeholder="Name" name="name"/>
-          <FormInput type="text" placeholder="Email" email="email"/>
-          <FormTextArea placeholder="Enter your message here..." name="message" />
-          <FormBtn type="button">send</FormBtn>
+        <ContactForm
+          name="contact"
+          data-netlify="true"
+          method="post"
+          data-netlify-honeypot="bot-field"
+        >
+          <input type="hidden" name="bot-field" value="contact" />
+          <FormInput type="text" placeholder="Name" name="name" required />
+          <FormInput type="text" placeholder="Email" email="email" required />
+          <FormTextArea
+            placeholder="Enter your message here..."
+            name="message"
+          />
+          <FormBtn>send</FormBtn>
         </ContactForm>
       </ContactContainer>
     </Fragment>

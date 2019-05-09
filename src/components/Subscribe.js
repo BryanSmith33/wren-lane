@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
 import { Wren, Lane } from './uiComponents/uiComponents'
+import addToMailchimp from 'gatsby-plugin-mailchimp'
 
 const SubScribeContainer = styled.div`
   width: 310px;
@@ -22,7 +23,7 @@ const Subscribe = styled.form`
 const Input = styled.input`
   font-family: 'Libreville', 'Times New Roman', Times, serif;
   height: 30px;
-  padding: 0em .5em;
+  padding: 0em 0.5em;
   margin: 1em 0;
   border: none;
   border-bottom: 1px solid #8b8b8b;
@@ -42,25 +43,61 @@ const Button = styled.button`
 const SubscribeBrand = styled.h1`
   margin-top: 0.8em;
 `
+const SubscribSuccessContaier = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+`
 
 class SubscribeForm extends Component {
+  constructor() {
+    super()
+    this.state = {
+      subscribeSuccess: null,
+    }
+  }
+
+  handleFormSubmit(e) {
+    e.preventDefault()
+    addToMailchimp(e.target.email.value, {
+      FNAME: e.target.name.value,
+    }).then(() => {
+      this.setState({ subscribeSuccess: true })
+    })
+  }
+
   render() {
     return (
       <SubScribeContainer>
-        <h2>Stay in the loop</h2>
-        <p>
-          Home renovation, family, style and health. Stay in the loop whenever a
-          new post goes live!
-        </p>
-        <Subscribe>
-          <Input type="text" placeholder="Name" />
-          <Input type="text" placeholder="Email" />
-          <Button>submit</Button>
-        </Subscribe>
-        <SubscribeBrand>
-          <Wren>Wren</Wren> <br />
-          <Lane>Lane</Lane>
-        </SubscribeBrand>
+        {this.state.subscribeSuccess ? (
+          <SubscribSuccessContaier>
+            <h1>Thanks for subscribing!</h1>
+            <p>XOXO,</p>
+            <SubscribeBrand>
+              <Wren>Wren</Wren> <br />
+              <Lane>Lane</Lane>
+            </SubscribeBrand>
+          </SubscribSuccessContaier>
+        ) : (
+          <div>
+            <h2>Stay in the loop</h2>
+            <p>
+              Home renovation, family, style and health. Get updated whenever a
+              new post goes live!
+            </p>
+            <Subscribe onSubmit={(e) => this.handleFormSubmit(e)}>
+              <Input type="text" placeholder="Name" name="name" required />
+              <Input type="email" placeholder="Email" name="email" required />
+              <Button>submit</Button>
+            </Subscribe>
+            <SubscribeBrand>
+              <Wren>Wren</Wren> <br />
+              <Lane>Lane</Lane>
+            </SubscribeBrand>
+          </div>
+        )}
       </SubScribeContainer>
     )
   }

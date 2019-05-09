@@ -31,6 +31,8 @@ const NavLink = styled(Link)`
   font-size: 1.1em;
   font-family: 'Quickie', Arial, Helvetica, sans-serif;
   font-weight: bold;
+  width: 100%;
+  text-align: center;
   &:nth-child(odd){
     margin: 1em 0;
   }
