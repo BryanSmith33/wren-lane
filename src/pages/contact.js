@@ -83,12 +83,25 @@ const Contact = () => (
         <ContactForm
           name="contact"
           data-netlify="true"
-          method="post"
+          method="POST"
           data-netlify-honeypot="bot-field"
+          action="/success"
         >
-          <input type="hidden" name="bot-field" value="contact" />
-          <FormInput type="text" placeholder="Name" name="name" required />
-          <FormInput type="text" placeholder="Email" email="email" required />
+          <input type="hidden" name="form-name" value="contact" />
+          <FormInput
+            type="text"
+            placeholder="Name"
+            name="name"
+            required
+            id="name"
+          />
+          <FormInput
+            type="text"
+            placeholder="Email"
+            email="email"
+            required
+            id="email"
+          />
           <FormTextArea
             placeholder="Enter your message here..."
             name="message"
