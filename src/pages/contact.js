@@ -96,9 +96,9 @@ const Contact = () => (
             id="name"
           />
           <FormInput
-            type="text"
+            type="email"
             placeholder="Email"
-            email="email"
+            name="email"
             required
             id="email"
           />
