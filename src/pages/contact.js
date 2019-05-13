@@ -1,7 +1,8 @@
-import React, { Fragment } from 'react'
+import React, { Fragment, useRef } from 'react'
 import Layout from '../components/layout'
 import Helmet from 'react-helmet'
 import styled from 'styled-components'
+import axios from 'axios'
 
 const ContactTitle = styled.h1`
   text-align: center;
@@ -53,64 +54,75 @@ const FormBtn = styled.button`
   background: #111;
 `
 
-const Contact = () => (
-  <Layout>
-    <Helmet
-      htmlAttributes={{ lang: 'en' }}
-      meta={[
-        {
-          name: 'description',
-          content: `Home renovation, health, fashion and family blog`,
-        },
-        {
-          name: 'keywords',
-          content: `Home renovation, Health and Fitness, Family, Blog, Fashion`,
-        },
-      ]}
-      title={`Wren Lane | Contact Us`}
-    />
-    <Fragment>
-      <ContactTitle>Contact Us</ContactTitle>
-      <ContactContainer>
-        <ContactText>
-          Want to know more? Looking for a recipe? Interested in working with
-          us? Shoot us a message and we will get back to you. You can also reach
-          us at{' '}
-          <ContactEmail href="mailto:hello@wrenlane.com">
-            hello@wrenlane.com
-          </ContactEmail>
-        </ContactText>
-        <ContactForm
-          name="contact"
-          data-netlify="true"
-          method="POST"
-          data-netlify-honeypot="bot-field"
-          action="/success"
-        >
-          <input type="hidden" name="form-name" value="contact" />
-          <FormInput
-            type="text"
-            placeholder="Name"
-            name="name"
-            required
-            id="name"
-          />
-          <FormInput
-            type="email"
-            placeholder="Email"
-            name="email"
-            required
-            id="email"
-          />
-          <FormTextArea
-            placeholder="Enter your message here..."
-            name="message"
-          />
-          <FormBtn>send</FormBtn>
-        </ContactForm>
-      </ContactContainer>
-    </Fragment>
-  </Layout>
-)
+const Contact = () => {
+  const contactForm = useRef(null)
+  const handleSubmitForm = (e) => {
+    e.preventDefault()
+    const data = new FormData(contactForm.current)
+    axios.post('/', data).then((res) => {
+      alert('Thank you!')
+    })
+  }
+  return (
+    <Layout>
+      <Helmet
+        htmlAttributes={{ lang: 'en' }}
+        meta={[
+          {
+            name: 'description',
+            content: `Home renovation, health, fashion and family blog`
+          },
+          {
+            name: 'keywords',
+            content: `Home renovation, Health and Fitness, Family, Blog, Fashion`
+          }
+        ]}
+        title={`Wren Lane | Contact Us`}
+      />
+      <Fragment>
+        <ContactTitle>Contact Us</ContactTitle>
+        <ContactContainer>
+          <ContactText>
+            Want to know more? Looking for a recipe? Interested in working with
+            us? Shoot us a message and we will get back to you. You can also
+            reach us at{' '}
+            <ContactEmail href="mailto:hello@wrenlane.com">
+              hello@wrenlane.com
+            </ContactEmail>
+          </ContactText>
+          <ContactForm
+            name="contact"
+            data-netlify="true"
+            method="POST"
+            data-netlify-honeypot="bot-field"
+            onSubmit={(e) => handleSubmitForm(e)}
+            ref={contactForm}
+          >
+            <input type="hidden" name="form-name" value="contact" />
+            <FormInput
+              type="text"
+              placeholder="Name"
+              name="name"
+              required
+              id="name"
+            />
+            <FormInput
+              type="email"
+              placeholder="Email"
+              name="email"
+              required
+              id="email"
+            />
+            <FormTextArea
+              placeholder="Enter your message here..."
+              name="message"
+            />
+            <FormBtn>send</FormBtn>
+          </ContactForm>
+        </ContactContainer>
+      </Fragment>
+    </Layout>
+  )
+}
 
 export default Contact

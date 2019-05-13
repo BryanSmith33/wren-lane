@@ -1,6 +1,11 @@
 import React from 'react'
 import Layout from '../components/layout'
 import Helmet from 'react-helmet'
+import styled from 'styled-components'
+
+const SuccessContainer = styled.div`
+  text-align: center;
+`
 
 const Contact = () => (
   <Layout>
@@ -9,16 +14,19 @@ const Contact = () => (
       meta={[
         {
           name: 'description',
-          content: `Home renovation, health, fashion and family blog`,
+          content: `Home renovation, health, fashion and family blog`
         },
         {
           name: 'keywords',
-          content: `Home renovation, Health and Fitness, Family, Blog, Fashion`,
-        },
+          content: `Home renovation, Health and Fitness, Family, Blog, Fashion`
+        }
       ]}
-      title={`Wren Lane | Thanks for the email!`}
+      title={`Wren Lane | Thank you!`}
     />
-    <h1>Success</h1>
+    <SuccessContainer>
+      <h1>Thanks for the message!</h1>
+      <p>We will get back to you as soon as we can.</p>
+    </SuccessContainer>
   </Layout>
 )
 

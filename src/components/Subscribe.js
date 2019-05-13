@@ -52,14 +52,11 @@ const SubscribSuccessContaier = styled.div`
 `
 
 class SubscribeForm extends Component {
-  constructor() {
-    super()
-    this.state = {
-      subscribeSuccess: null,
-    }
+  state = {
+    subscribeSuccess: null,
   }
 
-  handleFormSubmit(e) {
+  handleFormSubmit = (e) => {
     e.preventDefault()
     addToMailchimp(e.target.email.value, {
       FNAME: e.target.name.value,
@@ -87,7 +84,7 @@ class SubscribeForm extends Component {
               Home renovation, family, style and health. Get updated whenever a
               new post goes live!
             </p>
-            <Subscribe onSubmit={(e) => this.handleFormSubmit(e)}>
+            <Subscribe onSubmit={this.handleFormSubmit}>
               <Input type="text" placeholder="Name" name="name" required />
               <Input type="email" placeholder="Email" name="email" required />
               <Button>submit</Button>
