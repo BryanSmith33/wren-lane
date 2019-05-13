@@ -7,7 +7,7 @@ const MenuContaier = styled.div`
   width: 300px;
   height: calc(100vh - 50px);
   background: #fffefc;
-  z-index: 2;
+  z-index: 3;
   position: fixed;
   left: ${props => (props.visible ? `0` : `-1000px`)};
   top: 50px;
